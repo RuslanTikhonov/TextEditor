@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExampleApp"
         mc:Ignorable="d"
-        Title="Программа" Height="450" Width="800" ResizeMode="NoResize"
+        Title="Программа" Height="544" Width="817" ResizeMode="NoResize"
         Topmost="False" WindowState="Normal" Icon="./Resources/icon.png">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
@@ -80,10 +80,25 @@
                     <ComboBoxItem>24</ComboBoxItem>
                     <ComboBoxItem>32</ComboBoxItem>
                     <ComboBoxItem>48</ComboBoxItem>
-                    
+
                 </ComboBox>
             </ToolBar>
         </ToolBarTray>
-        <TextBox x:Name="textBox" Width="782" Margin="0,5,0,1" FontSize="14"></TextBox>
+        <TabControl Width="790">
+            <TabItem Header="Регистрация">
+                <Grid Background="#10111f">
+                    <TextBox x:Name="loginFields" Foreground="White" Width="300" Background="#202347"   Height="50" Margin="244,105,240,184" FontSize="20" />
+                    <PasswordBox x:Name="passField" Foreground="White" Width="300" Background="#202347" Height="50" HorizontalAlignment="Center"  Margin="244,176,240,113" FontSize="20" />
+                    <Label x:Name="label" Content="       Регистрация в программе" Foreground="#d24d57" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="224,30,207,0"  FontSize="20" FontFamily="Times New Roman" FontWeight="Bold" Height="61" Width="353"/>
+                    <Button x:Name="regBtn" Content="Зарегистрироваться" Foreground="White" Background="#202347" HorizontalAlignment="Center" Width="250" Margin="0,340,0,49" FontSize="20"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Редактор">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="textBox" Width="782" FontSize="14"></TextBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
     </DockPanel>
 </Window>
