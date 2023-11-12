@@ -28,17 +28,17 @@ namespace ExampleApp
             //this.Title = "Hello to all";
             this.WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
-
+        //выход из программы
         private void exitProgram_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
+        //сохранение файла
         private void saveFile_Click(object sender, RoutedEventArgs e)
         {
             saveToFile();
         }
-
+        //создание файла
         private void createNewFile_Click(object sender, RoutedEventArgs e)
         {
             if(textBox.Text != "")
@@ -47,7 +47,7 @@ namespace ExampleApp
             }
             textBox.Text = "";
         }
-
+        //функция сохранения
         private void saveToFile()
         {
             SaveFileDialog sfd = new SaveFileDialog();
@@ -63,7 +63,7 @@ namespace ExampleApp
                 }
             }
         }
-
+        //открытие файла
         private void openNewFile_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -79,19 +79,19 @@ namespace ExampleApp
                 }
             }
         }
-
+        //установка шрифта Times New Roman
         private void timesNewRoman_Click(object sender, RoutedEventArgs e)
         {
             textBox.FontFamily = new FontFamily("Times New Roman");
             verdanaFont.IsChecked = false;
         }
-
+        //установка шрифта Verdana
         private void verdanaFont_Click(object sender, RoutedEventArgs e)
         {
             textBox.FontFamily = new FontFamily("Verdana");
             timesNewRoman.IsChecked = false;
         }
-
+        //изменение размера шрифта
         private void selectFontSize_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string fontsize = selectFontSize.SelectedItem.ToString();
